@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+:root {
+	--color-footer-header: #161b22;
+	--color-input: #0d1117;
+	--font-color: #f0f6fc;
+	--font-color-hover: #6a6a6a;
+}
+
+body {
+	display: flex;
+}
+
+.menu {
+	align-self: flex-start;
+	background-color: var(--color-footer-header);
+	width: 100%;
+	height: 5em;
+	display: flex;
+	justify-content: space-between;
+}
+.menu__left--content {
+	margin-left: 20px;
+}
+.menu__rigth--content {
+	margin-right: 20px;
+}
+.menu__left--content,
+.menu__rigth--content {
+	display: flex;
+	align-items: center;
+	color: var(--font-color);
+}
+.menu__search--input {
+	background-color: var(--color-input);
+	border: 1px solid rgb(108, 106, 106);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	padding: 5px;
+	color: var(--font-color);
+	background-image: ("../img/search.png");
+	margin-left: 10px;
+}
+
+ul > li,
+.profile__user {
+	display: inline-block;
+}
+.menu__item > a {
+	text-decoration: none;
+	color: var(--font-color);
+	margin-left: 10px;
+}
+.menu__item > a:hover {
+	color: var(--font-color-hover);
+}
+
+.profile__user {
+	padding: 10px;
+	background-color: var(--font-color);
+	color: var(--color-footer-header);
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+}
+
+.menu__notifications,
+.menu__plus,
+.menu__profile,
+.menu__logo {
+	cursor: pointer;
+	margin-left: 1em;
+}
+
+.menu__notifications:hover,
+.menu__plus:hover,
+.menu__profile:hover,
+.menu__logo:hover {
+	color: var(--font-color-hover);
+}
