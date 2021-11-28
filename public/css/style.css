@@ -11,10 +11,20 @@
 	--color-input: #0d1117;
 	--font-color: #f0f6fc;
 	--font-color-hover: #6a6a6a;
+	--color-main-left: #0d1117;
+	--color-main-right: #010409;
+	--btn-color-green: #238636;
+	--btn-color-green-hover: #2ba142;
+	--font-color-blue: #4b89d0;
+	--btn-color-grey: #21262d;
+	--btn-color-grey-hover: #3f444b;
+	--color-item-article: #0d1117;
 }
 
 body {
 	display: flex;
+	flex-wrap: wrap;
+	color: var(--font-color);
 }
 
 .menu {
@@ -37,7 +47,8 @@ body {
 	align-items: center;
 	color: var(--font-color);
 }
-.menu__search--input {
+.menu__search--input,
+.search__input > input {
 	background-color: var(--color-input);
 	border: 1px solid rgb(108, 106, 106);
 	border-radius: 5px;
@@ -47,7 +58,6 @@ body {
 	-o-border-radius: 5px;
 	padding: 5px;
 	color: var(--font-color);
-	background-image: ("../img/search.png");
 	margin-left: 10px;
 }
 
@@ -88,4 +98,198 @@ ul > li,
 .menu__profile:hover,
 .menu__logo:hover {
 	color: var(--font-color-hover);
+}
+
+/*Aside*/
+.container {
+	width: 100%;
+	display: flex;
+}
+.main__left--content {
+	background-color: var(--color-main-left);
+	width: 35vw;
+	padding: 20px;
+}
+.label__button {
+	display: flex;
+	justify-content: space-between;
+}
+.btn__color--green {
+	background-color: var(--btn-color-green);
+	color: var(--font-color);
+	padding: 5px 10px;
+	border-radius: 7px;
+	border: none;
+	font-weight: bold;
+}
+.btn__color--green:hover {
+	background-color: var(--btn-color-green-hover);
+}
+
+.search__input > input {
+	width: 100%;
+	margin-left: 0;
+	margin-top: 10px;
+}
+
+.show__repositories > .profile__user {
+	padding: 3px;
+	margin-top: 16px;
+}
+
+.show__repositories > a {
+	color: var(--font-color);
+	text-decoration: none;
+}
+
+.show__repositories > a:hover {
+	text-decoration: underline;
+}
+hr {
+	border: 0.1px solid var(--font-color-hover);
+	margin-top: 16px;
+}
+.left__info {
+	margin-top: 16px;
+}
+.left__info > p {
+	font-size: 12px;
+	margin-top: 16px;
+}
+
+.main__right--content {
+	background-color: var(--color-main-right);
+	width: 65vw;
+	display: flex;
+}
+.main__right--content {
+	padding: 30px;
+}
+.principal__container {
+	width: 60%;
+}
+.item__article {
+	padding: 16px;
+	border: 1px solid var(--font-color-hover);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	width: 100%;
+	background-color: var(--color-item-article);
+	margin: 16px 0px;
+}
+
+.item__article:nth-child(1) > p {
+	display: inline-block;
+}
+
+.item__article:nth-child(1) > i {
+	float: right;
+}
+
+.item__article:nth-child(1) > i:hover {
+	cursor: pointer;
+	color: var(--font-color-hover);
+}
+
+.button__article {
+	margin-top: 16px;
+}
+
+.btn__color--grey {
+	background-color: var(--btn-color-grey);
+	color: var(--font-color-blue);
+	border: 1px solid var(--font-color-hover);
+	padding: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.btn__color--grey:hover {
+	cursor: pointer;
+	background-color: var(--btn-color-grey-hover);
+}
+
+.card {
+	border: 1px solid var(--font-color-hover);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	margin: 16px 0px;
+}
+
+.title__card {
+	padding: 16px;
+	border-bottom: 1px solid var(--font-color-hover);
+}
+
+.content__card {
+	background-color: var(--color-footer-header);
+	padding: 16px;
+}
+
+.content__card > ol {
+	margin-left: 16px;
+}
+
+.footer__card {
+	display: flex;
+	justify-content: flex-end;
+	align-items: baseline;
+}
+
+.footer__card > a {
+	color: var(--font-color-blue);
+	text-decoration: none;
+	margin-right: 16px;
+}
+
+.footer__card > a:hover {
+	text-decoration: underline;
+}
+
+.footer__card > .btn__color--green {
+	padding: 10px;
+}
+
+.secundary__container {
+	padding: 16px;
+	width: 40%;
+}
+
+.notification__rigth {
+	padding: 16px;
+	border: 1px solid var(--font-color-hover);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	background: center / cover no-repeat
+		url("https://github.githubassets.com/images/modules/site/heroes/universe-21-dashboard-bg.png");
+}
+
+.link__white {
+	color: var(--font-color);
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 20px;
+	margin-left: 5px;
+}
+
+.notification__rigth--text {
+	margin: 16px 0;
+	font-size: 13px;
+}
+
+.notification__rigth > .btn__color--grey {
+	color: var(--font-color);
+	padding: 8px;
 }
